@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>Monkey Sling</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- Enable IE9 Standards mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width", initial-scale=1.0, user-scalable="no"/>-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="shortcut icon" type="image/ico" href="/monkeysling/res/assets/web/favicon.ico" />
+    <link rel="stylesheet" href="/monkeysling/res/assets/css/base.css" type="text/css" />
+
+   </head>
+   <body onselectstart="return false;"  style="width:100%; height:100%;" class="shared-web-tilebg">
+       <div style="display:none;">
+           <!-- used for RT to pickup when sharing with email -->
+           <img src="/monkeysling/res/assets/web/90x90.png" />
+       </div>     
+    <table cellpadding="0" cellspacing="0" border="0" class="fill">
+        <tr>
+            <td align=center valign=middle>
+               <div style="border:2px solid black; width:1024px; height:576px;" class="container" id="container">
+                    <canvas id="canvas" width="1024" height="576" style="border:0px solid black; background-color:#B6E0F4;"></canvas>
+                    <div class="level-complete-template ingame-container fill" style="display:none;">
+                        <div class="ingame-shadow fill"></div>
+                        <table class="ingame-container fill">
+                            <tr>
+                                <td align=center valign=middle>
+                                    <div  class="ingame-stars-buttons-wrapper">
+                                        <div class="ingame-stars-buttons-wrapper-shadow ingame-stars-buttons-wrapper" style="height: 100%; position:absolute; top:0px;"></div>
+                                        <div style="" class="ingame-stars-buttons-wrapper">
+                                            <canvas class="ingame-level-completed-canvas ingame-container fill" style="left:0px; top:0px;"></canvas>
+                                            <table class="ingame-container fill ingame-stars-buttons-wrapper" border="0" cellpadding="0" cellspacing="0" style="background-colorXX:red;">
+                                                <tr>
+                                                    <td align="center">
+                                                        <div class="ingame-level-completed-title">
+                                                            Level Cleared!
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" style="" valign=top>
+                                                        <div class="level-completed-star-container">
+                                                            <div class="level-completed-star level-completed-star-off" style="display:inline-block"></div>
+                                                            <div class="level-completed-star level-completed-star-off" style="display:inline-block"></div>
+                                                            <div class="level-completed-star level-completed-star-off" style="display:inline-block"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" valign="top">
+                                                        <div style="min-height:100px;">
+                                                            <div style="margin-bottom:10px;">
+                                                                <div class="ingame-btn ingame-btn-main" style="display:inline-block"></div>
+                                                                <div class="ingame-btn ingame-btn-stop" style="display:none;"></div>
+                                                                <div class="ingame-btn ingame-btn-refresh" style="display:inline-block; margin-left:10px;"></div>
+                                                                <div class="ingame-btn ingame-btn-play" style="display:inline-block;  margin-left:10px;"></div>
+                                                                <div class="ingame-btn ingame-btn-share" style="margin-left:10px; display:none;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                   </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+      
+
+    <!-- BEING CACHE SOME IMAGES -->
+    <div style="display:none;">
+        <img src="/monkeysling/res/assets/logo/ms_logo.png" style="display:none;"/>
+        <img src="/monkeysling/res/assets/intro/monkey.png" style="display:none;"/>
+        <img src="/monkeysling/res/assets/intro/star.png" style="display:none;"/>
+        <img src="/monkeysling/res/assets/intro/banana.png" style="display:none;"/>
+        <img src="/monkeysling/res/assets/intro/ok.png" style="display:none;"/>
+    </div>
+    <!-- END CACHE SOME IMAGES -->
+    <div id="debug4" style="display:none;"></div>
+
+        
+   </body>
+   
+
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31465988-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function () {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+</script>
+</html>

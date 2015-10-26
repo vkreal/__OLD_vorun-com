@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <!-- Enable IE9 Standards mode -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!--<meta name="viewport" content="width=device-width", initial-scale=1.0, user-scalable="no"/>-->
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>-->
+        <!--<meta name="viewport" content="width=device-width, user-scalable=no"/>-->
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+        <meta name="format-detection" content="telephone=no"/>
+
+        <!-- BEGIN Facebook stuff -->
+        <meta property="og:title" content="Break It" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Break It" />
+        <meta property="og:description" content="Avoid missing ball, break bricks, pick up points and move to next level for high score." />
+        <!--<meta property="og:image" content="./assets/chrome-hosted/128.png"/>-->
+        <!-- END Facebook stuff -->
+
+        <link rel="apple-touch-icon-precomposed" href="./assets/touch/57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/touch/72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/touch/114.png" />
+
+        <!-- <link rel="apple-touch-startup-image" href="./assets/touch/iphone_splash.png" />-->
+
+        <!-- GENERATED DATE: {{ DATETIME }} -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="HTML5 GAMES CANVAS BREAKIT BREAKOUT"/> 
+		<meta name="keywords" content="HTML5 GAMES CANVAS BREAKIT BREAKOUT" />
+		<title>Break It</title>
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Bangers&v1' type='text/css'/>
+        <link rel="stylesheet" href="./assets/bootstrap.min.css?v={{APP_VERSION}}" type="text/css"/>
+        <link rel="stylesheet" href='./assets/base.css?v={{APP_VERSION}}' type='text/css'/>
+
+    </head>
+    <body style="margin:0;padding:0;">
+        <div style="display: block;">
+            <div style="position:relative;">
+                <table id="game-wrapper" border="0" style=" margin: auto; width:100%; padding:0; border:0px !important;">
+                    <tr>
+                        <td style="border:0px !important;" id="top-bar">
+                            <span id="scoreboard-container">
+                                <button class="btn small danger" onclick="BREAKOUT.pauseToggle()">Pause</button> 
+                                <button class="btn success small" onclick="BREAKOUT.levelsUI()">Levels</button>
+                                <button class="btn small" onclick="BREAKOUT.restartLevel()">Restart</button>
+                               <!-- <button class="btn small" onclick="BREAKOUT.saveAsPNG()">Screen Shoot</button>-->
+                            </span>
+                            <span style="float:right;">
+                                <span style="top:8px; position:relative;">
+                                    <img id="sounds-icon" src="./assets/images/sound-on-icon24.png" onclick="VK.BreakoutGame.toggleSounds();"/>
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height:100% !important; text-align:center; margin:auto; border:0px !important;">
+                             <div UNSELECTABLE id="game-container-div" class="game-container-div" style="height:567px;">
+                                <canvas UNSELECTABLE id="canvas" class="game-canvas"></canvas>
+                                <div id="director" class="spiral" style="background-color:black;"> 
+                                    <div style="margin-top:80px;">
+        	                            <div class="startScreen"> 
+        	                                <h1><span class="game-font" style="font-size:160px; color:#4D90FE">Break It</span></h1> 
+        	                            </div>
+                                         <div> 
+        	                                <h1><img id="btnPlay" style="display:none" src="./assets/images/play-icon.png" title="Play Now" onclick="play()"/></h1> 
+        	                            </div>
+                                        <div>
+                                            <span id="instruction-web" style="font-family:arial,sans-serif; display:none;">Left/Right keys or mouse to move paddle</span>
+                                            <span id="instruction-touch" style="font-family:arial,sans-serif; display:none;">Drag paddle to move</span>
+                                        </div>
+                                        <div style="padding-top:20px;">
+                                            <span style="color:#fff; font-style:italic;">By Vorun Kreal</span>
+                                        </div>
+                                    </div>
+                                 </div>
+                             </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div style="position:absolute" id="fb-like" class="fb-like" data-href="https://chrome.google.com/webstore/detail/aonbcmkbpldacdgebdedgccbdcahhmbl?hl=en-US" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+         <script>
+             var APP_ROOT = './';
+        </script>
+        <script type="text/javascript" src="./build/compiled-web.js"></script>
+        <div id="fb-root"></div>
+        <script type="text/javascript">
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) { return; }
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1&appId=196173013788694";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </body>
+</html>
